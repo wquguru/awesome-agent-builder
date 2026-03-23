@@ -21,8 +21,7 @@ Curated by [AgentWay.dev](https://agentway.dev) | 由 [AgentWay.dev](https://age
 - [How to Use This List | 如何使用本列表](#how-to-use-this-list--如何使用本列表)
 - [The SDK Wars | SDK 混战](#the-sdk-wars--which-framework-should-you-choose--sdk-混战--你该选哪个框架)
 - [Stage 1: Agent Fundamentals | 基础入门](#stage-1-agent-fundamentals--基础入门)
-  - [Agent Frameworks | Agent 框架](#agent-frameworks--agent-框架)
-  - [LLM SDKs & Providers | 大模型 SDK 与服务商](#llm-sdks--providers--大模型-sdk-与服务商)
+  - [Agent Frameworks & SDKs | Agent 框架与 SDK](#agent-frameworks--sdks--agent-框架与-sdk)
   - [Starter Templates & Boilerplates | 入门模板](#starter-templates--boilerplates--入门模板)
 - [Stage 2: Tools & Integration | 工具与集成](#stage-2-tools--integration--工具与集成)
   - [Tool Use & Function Calling | 工具调用](#tool-use--function-calling--工具调用)
@@ -87,51 +86,26 @@ Agent 开发框架层出不穷 —— Claude Agent SDK、Vercel AI SDK、Google 
 
 **应该选择哪个？npm 周下载量给出了明确答案。** 过去一年（2025.03 → 2026.03）：
 
-| SDK | npm Package | Mar 2025 Weekly | Mar 2026 Weekly | YoY Growth | 增长趋势 |
-|---|---|---|---|---|---|
-| **Anthropic SDK** | `@anthropic-ai/sdk` | 1.08M | 4.51M | **4.2x** 🔥 | 稳步增长 |
-| **Claude Code** | `@anthropic-ai/claude-code` | 164K | 4.02M | **24.5x** 🚀 | 爆发式增长 |
-| **Claude Agent SDK** | `@anthropic-ai/claude-agent-sdk` | — | 1.58M | *New* | 2025下半年新发布 |
-| **Vercel AI SDK** | `ai` | 1.04M | 4.54M | **4.4x** 🔥 | TypeScript 首选 |
-| **Google GenAI SDK** | `@google/genai` | 3K | 4.76M | **1,658x** 🚀 | 从零到顶级 |
-| **LangChain** | `langchain` | 691K | 990K | **1.4x** | 增长放缓 |
-| **LangChain Core** | `@langchain/core` | 865K | 1.59M | **1.8x** | 生态迁移中 |
+| SDK | npm Package | Mar 2025 | Mar 2026 | YoY Growth |
+|---|---|---|---|---|
+| **Vercel AI SDK** | `ai` | 1.04M | 4.54M | **4.4x** 🔥 |
+| **Google GenAI SDK** | `@google/genai` | 3K | 4.76M | **1,658x** 🚀 |
+| **Anthropic SDK** | `@anthropic-ai/sdk` | 1.08M | 4.51M | **4.2x** 🔥 |
+| **Claude Code** | `@anthropic-ai/claude-code` | 164K | 4.02M | **24.5x** 🚀 |
+| **Claude Agent SDK** | `@anthropic-ai/claude-agent-sdk` | — | 1.58M | *New in 2025* |
+| **LangChain Core** | `@langchain/core` | 865K | 1.59M | **1.8x** |
+| **LangChain** | `langchain` | 691K | 990K | **1.4x** |
 
 > *Data source: [npm API](https://api.npmjs.org/) — verified March 23, 2026 | 数据来源：npm 官方 API，2026年3月23日核实*
 
-**Python ecosystem is equally fierce | Python 生态同样激烈:**
+**The trend is clear | 趋势很明确：**
+- **Claude ecosystem surges** — Claude Code (24.5x!) is the fastest growing package. Combined with Anthropic SDK (4.51M) and Claude Agent SDK (1.58M, launched late 2025), the Claude ecosystem shows the strongest developer momentum.
+- **Model-native SDKs win** — Developers are moving from general orchestration frameworks (LangChain 1.4x) to model-native SDKs (Vercel 4.4x, Anthropic 4.2x, Google 1,658x).
+- **Pydantic AI is the Python dark horse** — 2.9M weekly PyPI downloads. The "FastAPI of agents" is resonating with Python developers.
 
-| SDK | PyPI Package | Weekly Downloads | 定位 |
-|---|---|---|---|
-| **Pydantic AI** | `pydantic-ai` | 2.9M | "FastAPI feeling" for agent dev |
-| **Google GenAI** | `google-genai` | 54M | Gemini/Vertex AI official |
-| **LangChain** | `langchain` | 1.2M monthly | The original orchestration framework |
+**Claude 生态势能最强** —— Claude Code（24.5倍增长！）是增速最快的包。结合 Anthropic SDK（周下载451万）和 Claude Agent SDK（158万，2025下半年新发布），Claude 生态展现出最强开发者动能。**模型原生 SDK 胜出** —— 开发者正从通用编排框架（LangChain 1.4倍）迁移到模型原生 SDK（Vercel 4.4倍, Anthropic 4.2倍, Google 1,658倍）。**Pydantic AI 是 Python 黑马** —— PyPI 周下载290万，"Agent 界的 FastAPI" 定位深入人心。
 
-### Key Takeaways | 关键洞察
-
-1. **Claude ecosystem is the fastest growing** — Claude Code (24.5x) and Anthropic SDK (4.2x) show the strongest developer momentum. Claude Agent SDK launched in late 2025 and already hit 1.58M weekly.
-
-   **Claude 生态增长最快** —— Claude Code（24.5倍）和 Anthropic SDK（4.2倍）显示最强开发者势能。Claude Agent SDK 2025下半年才发布，周下载量已达158万。
-
-2. **Vercel AI SDK dominates TypeScript** — 4.54M weekly downloads make it the go-to for web developers building AI-powered apps with Next.js/React.
-
-   **Vercel AI SDK 统治 TypeScript** —— 周下载454万，是Web开发者用 Next.js/React 构建 AI 应用的首选。
-
-3. **Google GenAI SDK: from zero to hero** — Launched mid-2025, it went from near-zero to 4.76M weekly. The Gemini 2.5 models are driving massive adoption.
-
-   **Google GenAI SDK：从零到顶级** —— 2025年中发布，从几乎为零到周下载476万。Gemini 2.5 系列模型驱动了大规模采用。
-
-4. **LangChain's growth is slowing** — Still widely used, but growth has plateaued. Developers are migrating to lighter, model-native SDKs.
-
-   **LangChain 增长放缓** —— 仍被广泛使用，但增长已趋于平缓。开发者正在迁移到更轻量的模型原生 SDK。
-
-5. **Pydantic AI is the Python dark horse** — 2.9M weekly PyPI downloads, backed by the Pydantic team. The "FastAPI of agents" positioning resonates with Python developers.
-
-   **Pydantic AI 是 Python 黑马** —— PyPI 周下载290万，Pydantic 团队出品。"Agent 界的 FastAPI" 定位深得 Python 开发者认同。
-
-> **Our recommendation | 我们的建议**: Don't chase frameworks — **choose based on your stack and use case**. See the comparison table below. For a deeper analysis, check [AgentWay — Framework Guide](https://agentway.dev/learn/docs/frameworks).
->
-> **不要追逐框架 —— 根据你的技术栈和场景选择。** 详见下方对比表。深入分析请看 [AgentWay — 框架指南](https://agentway.dev/learn/docs/frameworks)。
+> **Deep analysis | 深入分析**: [AgentWay — Framework Guide](https://agentway.dev/learn/docs/frameworks) covers framework selection strategy in detail.
 
 ---
 
@@ -141,53 +115,55 @@ Agent 开发框架层出不穷 —— Claude Agent SDK、Vercel AI SDK、Google 
 >
 > 从这里开始。理解 Agent 是什么，选择框架，构建你的第一个 Agent 循环。
 
-### Agent Frameworks | Agent 框架
+### Agent Frameworks & SDKs | Agent 框架与 SDK
 
-Full-featured frameworks for building agent applications.
+The landscape is divided into **model-native SDKs** (backed by LLM providers, fastest-growing) and **orchestration frameworks** (general-purpose, more features).
 
-用于构建 Agent 应用的全功能框架。
+当前格局分为**模型原生 SDK**（LLM 厂商出品，增长最快）和**编排框架**（通用型，功能更丰富）。
 
-| Project | Stars | npm/PyPI Weekly | Description | 适合阶段 |
+#### Model-Native Agent SDKs | 模型原生 Agent SDK
+
+These SDKs are built by the LLM providers themselves — tightest integration, fastest adoption growth.
+
+这些 SDK 由大模型厂商自研 —— 集成最紧密，采用增长最快。
+
+| Project | npm Weekly | Description | 适合场景 |
+|---|---|---|---|
+| [Claude Agent SDK](https://github.com/anthropics/claude-agent-sdk-typescript) | 1.58M 🚀 | Anthropic's agent SDK. Build agents with Claude Code capabilities — tool use, computer use, agentic loops. | Claude-native agent dev |
+| [Claude Code](https://docs.anthropic.com/en/docs/claude-code) | 4.02M 🚀 | Anthropic's agentic coding tool. Terminal-first, deep codebase understanding. 24.5x YoY growth. | AI coding / software eng |
+| [Anthropic SDK](https://github.com/anthropics/anthropic-sdk-python) | 4.51M 🔥 | Core Claude API client. Tool use, streaming, batching. Foundation for Claude Agent SDK. | All Claude integrations |
+| [AI SDK (Vercel)](https://github.com/vercel/ai) | 4.54M 🔥 | TypeScript SDK for streaming AI in web apps. Multi-provider, React/Next.js native. 4.4x YoY. | TypeScript / Web apps |
+| [Google GenAI SDK](https://github.com/googleapis/python-genai) | 4.76M 🚀 | Gemini API client. Multimodal, grounding, code exec. 1,658x YoY growth. | Gemini / Vertex AI |
+| [Google ADK](https://github.com/google/adk-python) | 10k+ ⭐ | Modular agent dev kit for Gemini/Vertex AI. | Google ecosystem agents |
+| [OpenAI Agents SDK](https://github.com/openai/openai-agents-python) | 15k+ ⭐ | Lightweight multi-agent SDK with tracing and guardrails. | GPT-native agent dev |
+
+#### Orchestration Frameworks | 编排框架
+
+General-purpose frameworks for complex agent workflows, multi-agent systems, and enterprise use cases.
+
+通用型框架，适用于复杂 Agent 工作流、多 Agent 系统和企业场景。
+
+| Project | Stars | npm/PyPI Weekly | Description | 适合场景 |
 |---|---|---|---|---|
-| [LangChain](https://github.com/langchain-ai/langchain) | 100k+ | 990K (npm) | The original LLM application framework with extensive integrations. | Beginner+ |
-| [LangGraph](https://github.com/langchain-ai/langgraph) | 15k+ | — | Stateful, graph-based agent workflows for production. `Production` | Intermediate+ |
-| [CrewAI](https://github.com/crewAIInc/crewAI) | 25k+ | — | Role-playing agent orchestration for collaborative teams. | Beginner+ |
-| [AutoGen](https://github.com/microsoft/autogen) | 40k+ | — | Event-driven multi-agent framework by Microsoft. | Intermediate+ |
-| [Semantic Kernel](https://github.com/microsoft/semantic-kernel) | 25k+ | — | Microsoft enterprise SDK for Python, C#, Java with plugins and planning. `Production` | Intermediate+ |
-| [OpenAI Agents SDK](https://github.com/openai/openai-agents-python) | 15k+ | — | Lightweight multi-agent SDK with tracing and guardrails. | Beginner+ |
-| [Google ADK](https://github.com/google/adk-python) | 10k+ | — | Modular agent dev kit integrating Gemini/Vertex AI. | Beginner+ |
-| [Mastra](https://github.com/mastra-ai/mastra) | 10k+ | — | Opinionated TypeScript framework with RAG and observability. | Intermediate+ |
-| [Strands Agents](https://github.com/strands-agents/sdk-python) | 5k+ | — | AWS model-driven agent SDK with Bedrock integration. `Production` | Intermediate+ |
-| [Pydantic AI](https://github.com/pydantic/pydantic-ai) | 15k+ | 2.9M (PyPI) | Agent framework built on Pydantic with type-safe tool definitions. | Beginner+ |
-| [Agno](https://github.com/agno-agi/agno) | 20k+ | — | Lightweight library for building multi-modal agents. | Beginner+ |
-| [Smolagents](https://github.com/huggingface/smolagents) | 15k+ | — | Hugging Face's minimalist agent library with code-based actions. | Beginner+ |
+| [LangGraph](https://github.com/langchain-ai/langgraph) | 15k+ | — | Stateful, graph-based agent workflows. `Production` | Complex workflows |
+| [LangChain](https://github.com/langchain-ai/langchain) | 100k+ | 990K (npm) | The original LLM framework with extensive integrations. | Broad ecosystem |
+| [CrewAI](https://github.com/crewAIInc/crewAI) | 25k+ | — | Role-playing agent orchestration for collaborative teams. | Multi-agent teams |
+| [AutoGen](https://github.com/microsoft/autogen) | 40k+ | — | Event-driven multi-agent framework by Microsoft. | Multi-agent conv. |
+| [Semantic Kernel](https://github.com/microsoft/semantic-kernel) | 25k+ | — | Microsoft enterprise SDK for Python, C#, Java. `Production` | Enterprise / .NET |
+| [Pydantic AI](https://github.com/pydantic/pydantic-ai) | 15k+ | 2.9M (PyPI) | Type-safe agent framework built on Pydantic. "FastAPI of agents." | Python + type safety |
+| [Mastra](https://github.com/mastra-ai/mastra) | 10k+ | — | Opinionated TypeScript framework with RAG and observability. | TypeScript apps |
+| [Strands Agents](https://github.com/strands-agents/sdk-python) | 5k+ | — | AWS model-driven agent SDK with Bedrock integration. `Production` | AWS / Bedrock |
 
 **How to choose | 如何选择:**
-- **Just starting?** → OpenAI Agents SDK or Pydantic AI — minimal API, fast to learn
-- **Enterprise/Production?** → LangGraph or Semantic Kernel — battle-tested, extensive tooling
-- **TypeScript?** → Vercel AI SDK + Mastra — the dominant TS stack (4.5M+ weekly downloads)
-- **Multi-agent orchestration?** → CrewAI or AutoGen — designed for agent collaboration
-- **Python + Type Safety?** → Pydantic AI — the FastAPI of agents (2.9M weekly, fastest-growing Python framework)
-- **Claude-native?** → Claude Agent SDK — direct access to Claude Code's capabilities
+- 🟢 **Just starting?** → Claude Agent SDK or OpenAI Agents SDK — model-native, minimal setup, fast to learn
+- 🏢 **Enterprise / .NET?** → Semantic Kernel — C#/Java/Python, Microsoft ecosystem
+- 🔷 **TypeScript / Web?** → Vercel AI SDK (4.5M weekly) + Mastra — dominant TS stack
+- 🤝 **Multi-agent teams?** → CrewAI or AutoGen — role-based collaboration
+- 🐍 **Python + Type Safety?** → Pydantic AI — the FastAPI of agents (2.9M weekly)
+- 🔄 **Complex workflows?** → LangGraph — graph-based state machines for production
+- ⚡ **Claude-native?** → Claude Agent SDK + Claude Code — strongest ecosystem momentum (24.5x growth)
 
 > **Learn more | 深入学习**: [AgentWay — Agent Basics](https://agentway.dev/learn/docs/basics) covers the agent loop pattern used by all these frameworks.
-
-### LLM SDKs & Providers | 大模型 SDK 与服务商
-
-Core SDKs for connecting to LLM providers. **The npm download numbers reflect real developer adoption — choose accordingly.**
-
-连接大模型服务商的核心 SDK。**npm 下载量反映真实的开发者采用度 —— 据此选择。**
-
-| Project | npm Weekly | PyPI Weekly | Key Models | 趋势 |
-|---|---|---|---|---|
-| [Anthropic SDK](https://github.com/anthropics/anthropic-sdk-python) | 4.51M | — | Claude 4, Claude 3.5 | 4.2x YoY 🔥 |
-| [Claude Agent SDK](https://github.com/anthropics/claude-agent-sdk-typescript) | 1.58M | — | Claude Code capabilities | New in 2025 🚀 |
-| [OpenAI SDK](https://github.com/openai/openai-python) | — | — | GPT-4o, o3, o4-mini | Industry standard |
-| [Google GenAI SDK](https://github.com/googleapis/python-genai) | 4.76M | 54M | Gemini 2.5 Pro/Flash | 1,658x YoY 🚀 |
-| [AI SDK (Vercel)](https://github.com/vercel/ai) | 4.54M | — | Multi-provider | 4.4x YoY 🔥 |
-| [AWS Bedrock SDK](https://docs.aws.amazon.com/bedrock/) | — | — | Multi-provider | Enterprise |
-| [Ollama](https://github.com/ollama/ollama) | 570K | — | Llama 3, Mistral, Phi | Local AI |
-| [LiteLLM](https://github.com/BerriAI/litellm) | — | — | All providers | Unified proxy |
 
 ### Starter Templates & Boilerplates | 入门模板
 
@@ -346,7 +322,8 @@ AI agents that write, review, and debug code.
 
 | Project | Stars | Description | Pricing |
 |---|---|---|---|
-| [Claude Code](https://docs.anthropic.com/en/docs/claude-code) | — | Anthropic's agentic coding tool. Terminal-first, deep codebase understanding. | Pay per use |
+| [Claude Code](https://docs.anthropic.com/en/docs/claude-code) | — | Anthropic's agentic coding tool. Terminal-first, deep codebase understanding. **4.02M npm weekly, 24.5x YoY.** | Pay per use |
+| [TRAE](https://www.trae.ai) | — | ByteDance's AI coding agent (formerly Marscode). End-to-end AI-native IDE. | Free / Pro |
 | [Cursor](https://cursor.com) | — | AI-native IDE with multi-file editing, Chat, and Composer. | Free / $20/mo |
 | [Aider](https://github.com/paul-gauthier/aider) | 30k+ | Terminal-first pair programming with git integration. | Free (OSS) |
 | [OpenHands](https://github.com/All-Hands-AI/OpenHands) | 50k+ | Open-source AI software developer agent platform. | Free (OSS) |
