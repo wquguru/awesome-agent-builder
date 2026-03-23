@@ -21,7 +21,7 @@ Curated by [AgentWay.dev](https://agentway.dev) | 由 [AgentWay.dev](https://age
 - [How to Use This List | 如何使用本列表](#how-to-use-this-list--如何使用本列表)
 - [The SDK Wars | SDK 混战](#the-sdk-wars--which-framework-should-you-choose--sdk-混战--你该选哪个框架)
 - [Stage 1: Agent Fundamentals | 基础入门](#stage-1-agent-fundamentals--基础入门)
-  - [Agent Frameworks & SDKs | Agent 框架与 SDK](#agent-frameworks--sdks--agent-框架与-sdk)
+  - [Agent Frameworks | Agent 框架](#agent-frameworks--agent-框架)
   - [Starter Templates & Boilerplates | 入门模板](#starter-templates--boilerplates--入门模板)
 - [Stage 2: Tools & Integration | 工具与集成](#stage-2-tools--integration--工具与集成)
   - [Tool Use & Function Calling | 工具调用](#tool-use--function-calling--工具调用)
@@ -115,53 +115,35 @@ Agent 开发框架层出不穷 —— Claude Agent SDK、Vercel AI SDK、Google 
 >
 > 从这里开始。理解 Agent 是什么，选择框架，构建你的第一个 Agent 循环。
 
-### Agent Frameworks & SDKs | Agent 框架与 SDK
+### Agent Frameworks | Agent 框架
 
-The landscape is divided into **model-native SDKs** (backed by LLM providers, fastest-growing) and **orchestration frameworks** (general-purpose, more features).
+Full-featured frameworks for building agent applications. Ranked by adoption and ecosystem maturity.
 
-当前格局分为**模型原生 SDK**（LLM 厂商出品，增长最快）和**编排框架**（通用型，功能更丰富）。
+用于构建 Agent 应用的全功能框架，按采用度和生态成熟度排列。
 
-#### Model-Native Agent SDKs | 模型原生 Agent SDK
-
-These SDKs are built by the LLM providers themselves — tightest integration, fastest adoption growth.
-
-这些 SDK 由大模型厂商自研 —— 集成最紧密，采用增长最快。
-
-| Project | npm Weekly | Description | 适合场景 |
-|---|---|---|---|
-| [Claude Agent SDK](https://github.com/anthropics/claude-agent-sdk-typescript) | 1.58M 🚀 | Anthropic's agent SDK. Build agents with Claude Code capabilities — tool use, computer use, agentic loops. | Claude-native agent dev |
-| [Claude Code](https://docs.anthropic.com/en/docs/claude-code) | 4.02M 🚀 | Anthropic's agentic coding tool. Terminal-first, deep codebase understanding. 24.5x YoY growth. | AI coding / software eng |
-| [Anthropic SDK](https://github.com/anthropics/anthropic-sdk-python) | 4.51M 🔥 | Core Claude API client. Tool use, streaming, batching. Foundation for Claude Agent SDK. | All Claude integrations |
-| [AI SDK (Vercel)](https://github.com/vercel/ai) | 4.54M 🔥 | TypeScript SDK for streaming AI in web apps. Multi-provider, React/Next.js native. 4.4x YoY. | TypeScript / Web apps |
-| [Google GenAI SDK](https://github.com/googleapis/python-genai) | 4.76M 🚀 | Gemini API client. Multimodal, grounding, code exec. 1,658x YoY growth. | Gemini / Vertex AI |
-| [Google ADK](https://github.com/google/adk-python) | 10k+ ⭐ | Modular agent dev kit for Gemini/Vertex AI. | Google ecosystem agents |
-| [OpenAI Agents SDK](https://github.com/openai/openai-agents-python) | 15k+ ⭐ | Lightweight multi-agent SDK with tracing and guardrails. | GPT-native agent dev |
-
-#### Orchestration Frameworks | 编排框架
-
-General-purpose frameworks for complex agent workflows, multi-agent systems, and enterprise use cases.
-
-通用型框架，适用于复杂 Agent 工作流、多 Agent 系统和企业场景。
-
-| Project | Stars | npm/PyPI Weekly | Description | 适合场景 |
+| Project | Stars | Weekly Downloads | Description | Best For |
 |---|---|---|---|---|
-| [LangGraph](https://github.com/langchain-ai/langgraph) | 15k+ | — | Stateful, graph-based agent workflows. `Production` | Complex workflows |
-| [LangChain](https://github.com/langchain-ai/langchain) | 100k+ | 990K (npm) | The original LLM framework with extensive integrations. | Broad ecosystem |
-| [CrewAI](https://github.com/crewAIInc/crewAI) | 25k+ | — | Role-playing agent orchestration for collaborative teams. | Multi-agent teams |
-| [AutoGen](https://github.com/microsoft/autogen) | 40k+ | — | Event-driven multi-agent framework by Microsoft. | Multi-agent conv. |
-| [Semantic Kernel](https://github.com/microsoft/semantic-kernel) | 25k+ | — | Microsoft enterprise SDK for Python, C#, Java. `Production` | Enterprise / .NET |
+| [Claude Agent SDK](https://github.com/anthropics/claude-agent-sdk-typescript) | — | 1.58M (npm) 🚀 | Anthropic's agent framework — tool use, computer use, agentic loops. New in 2025, fastest ecosystem growth. | Claude-native agents |
+| [AI SDK (Vercel)](https://github.com/vercel/ai) | 15k+ | 4.54M (npm) 🔥 | Multi-provider TypeScript SDK for streaming AI in React/Next.js apps. 4.4x YoY. | TypeScript / Web |
+| [LangGraph](https://github.com/langchain-ai/langgraph) | 15k+ | 34.5M (PyPI/mo) | Stateful, graph-based agent workflows. LangChain's production agent layer. `Production` | Complex workflows |
+| [LangChain](https://github.com/langchain-ai/langchain) | 100k+ | 990K (npm) | The original LLM application framework with extensive integrations. | Broad ecosystem |
+| [CrewAI](https://github.com/crewAIInc/crewAI) | 25k+ | — | Role-playing agent orchestration for collaborative teams. Fastest-adopted multi-agent framework. | Multi-agent teams |
+| [AutoGen](https://github.com/microsoft/autogen) | 40k+ | — | Event-driven multi-agent framework by Microsoft. Merging with Semantic Kernel. | Multi-agent conv. |
+| [Semantic Kernel](https://github.com/microsoft/semantic-kernel) | 25k+ | — | Microsoft enterprise SDK for Python, C#, Java with plugins and planning. `Production` | Enterprise / .NET |
+| [OpenAI Agents SDK](https://github.com/openai/openai-agents-python) | 15k+ | — | Lightweight multi-agent SDK with tracing, handoffs, and guardrails. | GPT-native agents |
+| [Google ADK](https://github.com/google/adk-python) | 10k+ | — | Modular agent dev kit integrating Gemini/Vertex AI. | Google ecosystem |
 | [Pydantic AI](https://github.com/pydantic/pydantic-ai) | 15k+ | 2.9M (PyPI) | Type-safe agent framework built on Pydantic. "FastAPI of agents." | Python + type safety |
 | [Mastra](https://github.com/mastra-ai/mastra) | 10k+ | — | Opinionated TypeScript framework with RAG and observability. | TypeScript apps |
 | [Strands Agents](https://github.com/strands-agents/sdk-python) | 5k+ | — | AWS model-driven agent SDK with Bedrock integration. `Production` | AWS / Bedrock |
 
 **How to choose | 如何选择:**
-- 🟢 **Just starting?** → Claude Agent SDK or OpenAI Agents SDK — model-native, minimal setup, fast to learn
-- 🏢 **Enterprise / .NET?** → Semantic Kernel — C#/Java/Python, Microsoft ecosystem
+- 🟢 **Just starting?** → Claude Agent SDK or OpenAI Agents SDK — minimal API, fast to learn
+- ⚡ **Claude ecosystem?** → Claude Agent SDK + Claude Code — strongest growth momentum (24.5x YoY)
 - 🔷 **TypeScript / Web?** → Vercel AI SDK (4.5M weekly) + Mastra — dominant TS stack
+- 🔄 **Complex workflows?** → LangGraph — graph-based state machines, production-proven
 - 🤝 **Multi-agent teams?** → CrewAI or AutoGen — role-based collaboration
 - 🐍 **Python + Type Safety?** → Pydantic AI — the FastAPI of agents (2.9M weekly)
-- 🔄 **Complex workflows?** → LangGraph — graph-based state machines for production
-- ⚡ **Claude-native?** → Claude Agent SDK + Claude Code — strongest ecosystem momentum (24.5x growth)
+- 🏢 **Enterprise / .NET?** → Semantic Kernel — C#/Java/Python, Microsoft ecosystem
 
 > **Learn more | 深入学习**: [AgentWay — Agent Basics](https://agentway.dev/learn/docs/basics) covers the agent loop pattern used by all these frameworks.
 
