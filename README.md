@@ -46,6 +46,7 @@ Curated by [AgentWay.dev](https://agentway.dev) | 由 [AgentWay.dev](https://age
   - [Podcasts & Videos | 播客与视频](#podcasts--videos--播客与视频)
   - [Newsletters | 订阅通讯](#newsletters--订阅通讯)
 - [Career & Jobs | 职业发展](#career--jobs--职业发展)
+  - [Top Companies Are Hiring | 头部团队招聘](#top-companies-are-hiring--agent-is-real--头部团队正在大规模招聘--agent-不是概念)
   - [In-Demand Roles | 热门岗位](#in-demand-roles--热门岗位)
   - [Job Boards | 招聘平台](#job-boards--招聘平台)
   - [Interview Prep | 面试准备](#interview-prep--面试准备)
@@ -494,6 +495,60 @@ Self-host and optimize LLM inference for agent workloads.
 >
 > 将 Agent 技能转化为职业优势。探索岗位、准备面试、构建作品集。
 
+### Top Companies Are Hiring — Agent Is Real | 头部团队正在大规模招聘 —— Agent 不是概念
+
+More and more top tech companies are putting Agent into real engineering requirements. Here's what the hiring landscape looks like in March 2026:
+
+越来越多头部团队已经把 Agent 放进真实工程需求里。以下是 2026 年 3 月的招聘实况：
+
+#### ByteDance | 字节跳动 — 18 Agent Positions
+
+ByteDance has **18 core Agent positions** across 5+ product lines, spanning tech R&D, product design, algorithms, and business strategy. Key product lines hiring:
+
+字节跳动开放了 **18 个 Agent 核心岗位**，覆盖技术研发、产品设计、算法优化、商业分析等多个维度：
+
+| Product Line | Example Roles | Focus |
+|---|---|---|
+| **TRAE** (端到端 AI 编程) | Agent 框架优化专家, AI Coding 产品经理, 战略商业分析师 | AI coding agent, 月活超100万 |
+| **火山引擎** | HiAgent 交付专家 | 企业级 Agent 平台 |
+| **剪映 CapCut** | 高级 AI Agent 开发工程师, 移动端研发工程师(即梦AI) | 视频创作 + AIGC |
+| **生活服务** | AI 应用开发工程师 | 游玩助手 Agent（Prompt/RAG/MCP） |
+| **TikTok Shop** | 资深前端研发工程师(AI方向) | 国际电商 + AIGC |
+| **Seed 研究院** | 大语言模型 AI 搜索 Agent 算法工程师 | 前沿 AI 研究 |
+| **开发者服务** | Dev Agent 后端开发, AI Agent 研发实习生 | 研发工具全链路 |
+
+> Data source: [jobs.bytedance.com](https://jobs.bytedance.com) — [Full report | 完整报告](https://youmind.com/s/ao2k8w2erLeFpZ)
+
+#### Tencent | 腾讯 — 6 Pages of Agent Positions
+
+Tencent's careers page returns **6 full pages** of Agent-related positions, spanning domestic (Beijing, Shanghai, Guangzhou, Shenzhen, Chengdu) and overseas (Palo Alto, Bellevue). Key directions:
+
+腾讯招聘官网搜索 "Agent" 返回**满满当当6页岗位**，覆盖国内北上广深成都及海外硅谷：
+
+| Direction | Example Roles | Salary Range |
+|---|---|---|
+| **Coding Agent** (北美) | Sr. AI Software Engineer – Coding Agent | $116K - $269K/yr |
+| **企业微信 Agent** | 深度学习算法工程师 - Agent 应用 | 30K-60K/月 |
+| **AI 搜索 Agent** | 大模型算法研究员（Agent 方向） | 30K-80K/月 |
+| **多模态 Agent** | 多模态大模型算法研究员 | 50K-80K/月 |
+
+> Data source: [careers.tencent.com](https://careers.tencent.com) — [Full report | 完整报告](https://youmind.com/s/6T00tMDDGETWef)
+
+#### What This Tells Us | 这说明什么
+
+The hiring data from ByteDance and Tencent reveals **which skills matter most** in real Agent engineering jobs:
+
+字节和腾讯的招聘数据揭示了 Agent 工程岗位**真正需要的技能**：
+
+1. **Agent framework design** (框架设计) — Tooling, Memory, Planning, Workflow orchestration
+2. **LLM engineering** (大模型工程化) — Prompt engineering, RAG, fine-tuning, multi-model support
+3. **Production engineering** (生产工程) — High availability, observability, cost control, MCP protocol
+4. **Cross-domain skills** (跨领域能力) — Business understanding + technical depth
+
+> **These skills map directly to our 4-stage learning path** — and to the [AgentWay curriculum](https://agentway.dev/zh) that covers 90% of the skills required by top-tier Agent positions.
+>
+> **这些技能直接对应我们的4阶段学习路径** —— 以及涵盖头部团队 Agent 应用开放岗位90%技能需求的 [AgentWay 大纲](https://agentway.dev/zh)。
+
 ### In-Demand Roles | 热门岗位
 
 The agent economy is creating new roles. Here are the most in-demand positions in 2026:
@@ -514,6 +569,8 @@ Agent 经济正在创造新的岗位。以下是 2026 年最热门的职位：
 
 | Platform | Focus | Region |
 |---|---|---|
+| [ByteDance Agent Jobs](https://jobs.bytedance.com) | 18+ Agent roles across TRAE/CapCut/TikTok | China / Global |
+| [Tencent Agent Jobs](https://careers.tencent.com/search.html?keyword=agent) | 6 pages of Agent positions | China / US |
 | [AI Jobs](https://aijobs.net) | AI/ML roles | Global |
 | [MLOps Jobs](https://mlops.jobs) | MLOps & AI Eng | Global |
 | [Wellfound (AngelList)](https://wellfound.com) | Startup AI roles | Global |
