@@ -12,72 +12,85 @@ Unlike other awesome lists that simply dump 300+ links, this project organizes r
 
 与其他简单罗列 300+ 链接的 awesome 列表不同，本项目按照 **开发者成长路径** 组织资源 —— 从基础原理到生产部署，从学习到职业发展。
 
-Curated by [AgentWay.dev](https://agentway.dev) | 由 [AgentWay.dev](https://agentway.dev) 策划
+Curated by [AgentWay.dev](https://agentway.dev?utm_source=github&utm_medium=awesome-list&utm_campaign=hero&utm_content=curated-by) | 由 [AgentWay.dev](https://agentway.dev?utm_source=github&utm_medium=awesome-list&utm_campaign=hero&utm_content=curated-by) 策划
+
+---
+
+## Quick Start | 快速开始
+
+**Just want to start building? Pick your path | 想直接开始？选择你的路径:**
+
+| Your Goal | Start Here | Time to First Agent |
+|---|---|---|
+| **Build my first agent** | [Stage 1: Pydantic AI or OpenAI Agents SDK](#agent-frameworks--agent-框架) | ~2 hours |
+| **Add tools & memory** | [Stage 2: MCP + Composio](#tool-use--function-calling--工具调用) | ~3 hours |
+| **Ship to production** | [Stage 4: Deploy + Monitor](#agent-deployment--hosting--部署与托管) | ~8 hours |
+
+---
+
+## What's New | 本月更新
+
+*March 2026*
+
+- **SDK Wars updated** — Google GenAI SDK hit 4.76M weekly (1,658x YoY), Claude Code at 24.5x growth
+- **Added** [Strands Agents](https://github.com/strands-agents/sdk-python) — AWS's new model-driven agent SDK
+- **Updated** ByteDance hiring data — 18 Agent positions now open across 5+ product lines
+- **New guide**: [Claude Code Mastery](https://agentway.dev/claudecode?utm_source=github&utm_medium=awesome-list&utm_campaign=whats-new&utm_content=claudecode) — 14-chapter deep dive
+
+[See all changes →](CHANGELOG.md)
 
 ---
 
 ## Contents | 目录
 
-- [How to Use This List | 如何使用本列表](#how-to-use-this-list--如何使用本列表)
-- [The SDK Wars | SDK 混战](#the-sdk-wars--which-framework-should-you-choose--sdk-混战--你该选哪个框架)
-- [Stage 1: Agent Fundamentals | 基础入门](#stage-1-agent-fundamentals--基础入门)
-  - [Agent Frameworks | Agent 框架](#agent-frameworks--agent-框架)
-  - [LLM SDKs & Providers | 大模型 SDK 与服务商](#llm-sdks--providers--大模型-sdk-与服务商)
-  - [Starter Templates & Boilerplates | 入门模板](#starter-templates--boilerplates--入门模板)
-- [Stage 2: Tools & Integration | 工具与集成](#stage-2-tools--integration--工具与集成)
-  - [Tool Use & Function Calling | 工具调用](#tool-use--function-calling--工具调用)
-  - [MCP Servers & Ecosystem | MCP 服务与生态](#mcp-servers--ecosystem--mcp-服务与生态)
-  - [Memory & Context Management | 记忆与上下文管理](#memory--context-management--记忆与上下文管理)
-  - [Prompt Engineering | 提示词工程](#prompt-engineering--提示词工程)
-- [Stage 3: Advanced Patterns | 高级模式](#stage-3-advanced-patterns--高级模式)
-  - [Multi-Agent Systems | 多 Agent 系统](#multi-agent-systems--多-agent-系统)
-  - [RAG & Knowledge | RAG 与知识库](#rag--knowledge--rag-与知识库)
-  - [Evaluation & Testing | 评估与测试](#evaluation--testing--评估与测试)
-  - [Coding Agents | 编程 Agent](#coding-agents--编程-agent)
-- [Stage 4: Production & Operations | 生产部署](#stage-4-production--operations--生产部署)
-  - [Agent Deployment & Hosting | 部署与托管](#agent-deployment--hosting--部署与托管)
-  - [Observability & Monitoring | 可观测与监控](#observability--monitoring--可观测与监控)
-  - [Safety & Guardrails | 安全与护栏](#safety--guardrails--安全与护栏)
-  - [LLM Serving & Inference | 模型服务与推理](#llm-serving--inference--模型服务与推理)
-- [Learning Resources | 学习资源](#learning-resources--学习资源)
-  - [Structured Courses | 系统课程](#structured-courses--系统课程)
-  - [Tutorials & Guides | 教程与指南](#tutorials--guides--教程与指南)
-  - [Books | 书籍](#books--书籍)
-  - [Podcasts & Videos | 播客与视频](#podcasts--videos--播客与视频)
-  - [Newsletters | 订阅通讯](#newsletters--订阅通讯)
-- [Career & Jobs | 职业发展](#career--jobs--职业发展)
-  - [Top Companies Are Hiring | 头部团队招聘](#top-companies-are-hiring--agent-is-real--头部团队正在大规模招聘--agent-不是概念)
-  - [In-Demand Roles | 热门岗位](#in-demand-roles--热门岗位)
-  - [Job Boards | 招聘平台](#job-boards--招聘平台)
-  - [Interview Prep | 面试准备](#interview-prep--面试准备)
-  - [Portfolio Projects | 作品集项目](#portfolio-projects--作品集项目)
-- [Community | 社区](#community--社区)
-  - [Discord & Slack Communities | Discord 与 Slack 社区](#discord--slack-communities--discord-与-slack-社区)
-  - [Conferences & Meetups | 会议与活动](#conferences--meetups--会议与活动)
-  - [Chinese Community | 中文社区](#chinese-community--中文社区)
+- [Quick Start](#quick-start--快速开始)
+- [What's New](#whats-new--本月更新)
+- [Agent Ecosystem Pulse](#agent-ecosystem-pulse--agent-生态脉搏)
+  - [Framework Decision Matrix](#framework-decision-matrix--框架决策矩阵)
+- [Career & Jobs](#career--jobs--职业发展)
+  - [Top Companies Are Hiring](#top-companies-are-hiring--agent-is-real--头部团队正在大规模招聘--agent-不是概念)
+  - [In-Demand Roles](#in-demand-roles--热门岗位)
+  - [Job Boards](#job-boards--招聘平台)
+  - [Interview Prep](#interview-prep--面试准备)
+  - [Portfolio Projects](#portfolio-projects--作品集项目)
+- [Stage 1: Agent Fundamentals](#stage-1-agent-fundamentals--基础入门)
+  - [Agent Frameworks](#agent-frameworks--agent-框架)
+  - [LLM SDKs & Providers](#llm-sdks--providers--大模型-sdk-与服务商)
+  - [Starter Templates & Boilerplates](#starter-templates--boilerplates--入门模板)
+- [Stage 2: Tools & Integration](#stage-2-tools--integration--工具与集成)
+  - [Tool Use & Function Calling](#tool-use--function-calling--工具调用)
+  - [MCP Servers & Ecosystem](#mcp-servers--ecosystem--mcp-服务与生态)
+  - [Memory & Context Management](#memory--context-management--记忆与上下文管理)
+  - [Prompt Engineering](#prompt-engineering--提示词工程)
+- [Stage 3: Advanced Patterns](#stage-3-advanced-patterns--高级模式)
+  - [Agent Patterns Cheat Sheet](#agent-patterns-cheat-sheet--agent-模式速查)
+  - [Multi-Agent Systems](#multi-agent-systems--多-agent-系统)
+  - [RAG & Knowledge](#rag--knowledge--rag-与知识库)
+  - [Evaluation & Testing](#evaluation--testing--评估与测试)
+  - [Coding Agents](#coding-agents--编程-agent)
+- [Stage 4: Production & Operations](#stage-4-production--operations--生产部署)
+  - [Agent Deployment & Hosting](#agent-deployment--hosting--部署与托管)
+  - [Observability & Monitoring](#observability--monitoring--可观测与监控)
+  - [Safety & Guardrails](#safety--guardrails--安全与护栏)
+  - [LLM Serving & Inference](#llm-serving--inference--模型服务与推理)
+- [Learning Resources](#learning-resources--学习资源)
+  - [Structured Courses](#structured-courses--系统课程)
+  - [Tutorials & Guides](#tutorials--guides--教程与指南)
+  - [Books](#books--书籍)
+  - [Podcasts & Videos](#podcasts--videos--播客与视频)
+  - [Newsletters](#newsletters--订阅通讯)
+- [Community](#community--社区)
+  - [Discord & Slack Communities](#discord--slack-communities--discord-与-slack-社区)
+  - [Conferences & Meetups](#conferences--meetups--会议与活动)
+  - [Chinese Community](#chinese-community--中文社区)
 
 ---
 
-## How to Use This List | 如何使用本列表
+## Agent Ecosystem Pulse | Agent 生态脉搏
 
-This list is organized by **developer growth stage**. Pick your current level and explore:
-
-本列表按 **开发者成长阶段** 组织，找到你当前的级别开始探索：
-
-| Stage | You Are Here If... | 适合你如果... |
-|---|---|---|
-| **Stage 1: Fundamentals** | Building your first agent, learning the basics | 正在构建第一个 Agent，学习基础知识 |
-| **Stage 2: Tools & Integration** | Adding tools, memory, and external services | 为 Agent 添加工具、记忆和外部服务 |
-| **Stage 3: Advanced Patterns** | Designing multi-agent systems, RAG, eval | 设计多 Agent 系统、RAG、评估体系 |
-| **Stage 4: Production** | Deploying, monitoring, and securing agents | 部署、监控和保障 Agent 安全 |
-
-Legend | 图例:
-- Tags indicate maturity: `Production` `Experimental` `Research`
-- 标签表示成熟度：`生产可用` `实验性` `研究性`
-
----
-
-## The SDK Wars — Which Framework Should You Choose? | SDK 混战 —— 你该选哪个框架？
+> Data-driven insights on the agent framework landscape. Updated monthly.
+>
+> Agent 框架生态的数据驱动洞察。每月更新。
 
 Agent development frameworks are emerging at breakneck speed — Claude Agent SDK, Vercel AI SDK, Google GenAI SDK, LangChain, Pydantic AI... It feels just like the TensorFlow vs. PyTorch vs. PaddlePaddle deep learning framework wars all over again. As a developer, the choices are overwhelming.
 
@@ -89,11 +102,11 @@ Agent 开发框架层出不穷 —— Claude Agent SDK、Vercel AI SDK、Google 
 
 | SDK | npm Package | Mar 2025 Weekly | Mar 2026 Weekly | YoY Growth | 增长趋势 |
 |---|---|---|---|---|---|
-| **Anthropic SDK** | `@anthropic-ai/sdk` | 1.08M | 4.51M | **4.2x** 🔥 | 稳步增长 |
-| **Claude Code** | `@anthropic-ai/claude-code` | 164K | 4.02M | **24.5x** 🚀 | 爆发式增长 |
+| **Anthropic SDK** | `@anthropic-ai/sdk` | 1.08M | 4.51M | **4.2x** | 稳步增长 |
+| **Claude Code** | `@anthropic-ai/claude-code` | 164K | 4.02M | **24.5x** | 爆发式增长 |
 | **Claude Agent SDK** | `@anthropic-ai/claude-agent-sdk` | — | 1.58M | *New* | 2025下半年新发布 |
-| **Vercel AI SDK** | `ai` | 1.04M | 4.54M | **4.4x** 🔥 | TypeScript 首选 |
-| **Google GenAI SDK** | `@google/genai` | 3K | 4.76M | **1,658x** 🚀 | 从零到顶级 |
+| **Vercel AI SDK** | `ai` | 1.04M | 4.54M | **4.4x** | TypeScript 首选 |
+| **Google GenAI SDK** | `@google/genai` | 3K | 4.76M | **1,658x** | 从零到顶级 |
 | **LangChain** | `langchain` | 691K | 990K | **1.4x** | 增长放缓 |
 | **LangChain Core** | `@langchain/core` | 865K | 1.59M | **1.8x** | 生态迁移中 |
 
@@ -129,9 +142,157 @@ Agent 开发框架层出不穷 —— Claude Agent SDK、Vercel AI SDK、Google 
 
    **Pydantic AI 是 Python 黑马** —— PyPI 周下载290万，Pydantic 团队出品。"Agent 界的 FastAPI" 定位深得 Python 开发者认同。
 
-> **Our recommendation | 我们的建议**: Don't chase frameworks — **choose based on your stack and use case**. See the comparison table below. For a deeper analysis, check [AgentWay — Agent Basics](https://agentway.dev/learn/docs/basics).
+### Framework Decision Matrix | 框架决策矩阵
+
+**Not sure which to pick? Match your needs | 不确定选哪个？按需匹配:**
+
+| If you need... | Choose | Why |
+|---|---|---|
+| Fastest learning curve | **Pydantic AI** | Type-safe, FastAPI-like, 2.9M weekly |
+| Enterprise production | **LangGraph** | Battle-tested, extensive tooling |
+| TypeScript + Next.js | **Vercel AI SDK + Mastra** | 4.5M weekly, best TS ecosystem |
+| Claude-native with coding | **Claude Agent SDK** | Direct Claude Code capabilities |
+| Multi-agent collaboration | **CrewAI or AutoGen** | Purpose-built for agent teams |
+| Minimal dependencies | **OpenAI Agents SDK** | Lightweight, official |
+| Google/Vertex AI stack | **Google ADK** | Native Gemini integration |
+| AWS infrastructure | **Strands Agents** | Bedrock integration, model-driven |
+
+> **Our recommendation | 我们的建议**: Don't chase frameworks — **choose based on your stack and use case**. For a deeper analysis of the agent loop pattern behind all frameworks, check [AgentWay — Agent Basics](https://agentway.dev/learn/docs/basics?utm_source=github&utm_medium=awesome-list&utm_campaign=ecosystem-pulse&utm_content=framework-guide).
 >
-> **不要追逐框架 —— 根据你的技术栈和场景选择。** 详见下方对比表。深入分析请看 [AgentWay — Agent 基础](https://agentway.dev/learn/docs/basics)。
+> **不要追逐框架 —— 根据你的技术栈和场景选择。** 深入了解所有框架背后的 Agent Loop 模式，请看 [AgentWay — Agent 基础](https://agentway.dev/learn/docs/basics?utm_source=github&utm_medium=awesome-list&utm_campaign=ecosystem-pulse&utm_content=framework-guide)。
+
+---
+
+## Career & Jobs | 职业发展
+
+> Agent skills = career leverage. See what top companies are paying and hiring for.
+>
+> Agent 技能 = 职业杠杆。看看头部公司在招什么、付多少。
+
+### Top Companies Are Hiring — Agent Is Real | 头部团队正在大规模招聘 —— Agent 不是概念
+
+More and more top tech companies are putting Agent into real engineering requirements. Here's what the hiring landscape looks like in March 2026:
+
+越来越多头部团队已经把 Agent 放进真实工程需求里。以下是 2026 年 3 月的招聘实况：
+
+#### ByteDance | 字节跳动 — 18 Agent Positions
+
+ByteDance has **18 core Agent positions** across 5+ product lines, spanning tech R&D, product design, algorithms, and business strategy. Key product lines hiring:
+
+字节跳动开放了 **18 个 Agent 核心岗位**，覆盖技术研发、产品设计、算法优化、商业分析等多个维度：
+
+| Product Line | Example Roles | Focus |
+|---|---|---|
+| **TRAE** (端到端 AI 编程) | Agent 框架优化专家, AI Coding 产品经理, 战略商业分析师 | AI coding agent, 月活超100万 |
+| **火山引擎** | HiAgent 交付专家 | 企业级 Agent 平台 |
+| **剪映 CapCut** | 高级 AI Agent 开发工程师, 移动端研发工程师(即梦AI) | 视频创作 + AIGC |
+| **生活服务** | AI 应用开发工程师 | 游玩助手 Agent（Prompt/RAG/MCP） |
+| **TikTok Shop** | 资深前端研发工程师(AI方向) | 国际电商 + AIGC |
+| **Seed 研究院** | 大语言模型 AI 搜索 Agent 算法工程师 | 前沿 AI 研究 |
+| **开发者服务** | Dev Agent 后端开发, AI Agent 研发实习生 | 研发工具全链路 |
+
+> Data source: [jobs.bytedance.com](https://jobs.bytedance.com) — [Full report | 完整报告](https://youmind.com/s/ao2k8w2erLeFpZ)
+
+#### Tencent | 腾讯 — 6 Pages of Agent Positions
+
+Tencent's careers page returns **6 full pages** of Agent-related positions, spanning domestic (Beijing, Shanghai, Guangzhou, Shenzhen, Chengdu) and overseas (Palo Alto, Bellevue). Key directions:
+
+腾讯招聘官网搜索 "Agent" 返回**满满当当6页岗位**，覆盖国内北上广深成都及海外硅谷：
+
+| Direction | Example Roles | Salary Range |
+|---|---|---|
+| **Coding Agent** (北美) | Sr. AI Software Engineer – Coding Agent | $116K - $269K/yr |
+| **企业微信 Agent** | 深度学习算法工程师 - Agent 应用 | 30K-60K/月 |
+| **AI 搜索 Agent** | 大模型算法研究员（Agent 方向） | 30K-80K/月 |
+| **多模态 Agent** | 多模态大模型算法研究员 | 50K-80K/月 |
+
+> Data source: [careers.tencent.com](https://careers.tencent.com) — [Full report | 完整报告](https://youmind.com/s/6T00tMDDGETWef)
+
+#### What This Tells Us | 这说明什么
+
+The hiring data from ByteDance and Tencent reveals **which skills matter most** in real Agent engineering jobs:
+
+字节和腾讯的招聘数据揭示了 Agent 工程岗位**真正需要的技能**：
+
+1. **Agent framework design** (框架设计) — Tooling, Memory, Planning, Workflow orchestration
+2. **LLM engineering** (大模型工程化) — Prompt engineering, RAG, fine-tuning, multi-model support
+3. **Production engineering** (生产工程) — High availability, observability, cost control, MCP protocol
+4. **Cross-domain skills** (跨领域能力) — Business understanding + technical depth
+
+> **Skills gap?** The [AgentWay curriculum](https://agentway.dev/learn?utm_source=github&utm_medium=awesome-list&utm_campaign=career&utm_content=skills-gap) covers 90% of the skills listed above. **Track 1 is free** — start with Agent Basics and Tool Use. Full curriculum (18 paths) starts at $79 lifetime.
+>
+> **技能差距？** [AgentWay 大纲](https://agentway.dev/zh?utm_source=github&utm_medium=awesome-list&utm_campaign=career&utm_content=skills-gap) 覆盖以上90%技能需求。**Track 1 免费** —— 从 Agent 基础和工具使用开始。完整课程（18条路径）$79起，终身访问。
+
+### In-Demand Roles | 热门岗位
+
+The agent economy is creating new roles. Here are the most in-demand positions in 2026:
+
+Agent 经济正在创造新的岗位。以下是 2026 年最热门的职位：
+
+| Role | Salary Range (USD) | Core Skills | Learning Path |
+|---|---|---|---|
+| **AI Agent Engineer** | $150k - $250k | Agent frameworks, MCP, tool integration, prompt eng | [AgentWay Track 1-3](https://agentway.dev/learn?utm_source=github&utm_medium=awesome-list&utm_campaign=career&utm_content=agent-engineer) |
+| **Agent Platform Engineer** | $160k - $280k | Infrastructure, deployment, scaling, monitoring | [Stage 4 resources](#stage-4-production--operations--生产部署) |
+| **AI Security Engineer** | $180k - $300k | Red teaming, guardrails, prompt injection defense | [AgentWay — Agent Security](https://agentway.dev/learn/docs/agent-security?utm_source=github&utm_medium=awesome-list&utm_campaign=career&utm_content=security-engineer) |
+| **RAG Engineer** | $140k - $240k | Vector DBs, chunking, retrieval, knowledge graphs | [AgentWay — Agentic RAG](https://agentway.dev/learn/docs/agentic-rag?utm_source=github&utm_medium=awesome-list&utm_campaign=career&utm_content=rag-engineer) |
+| **Multi-Agent Architect** | $180k - $320k | Orchestration, delegation, consensus, workflows | [AgentWay — Multi-Agent](https://agentway.dev/learn/docs/multi-agent?utm_source=github&utm_medium=awesome-list&utm_campaign=career&utm_content=multi-agent-architect) |
+| **LLM Ops / MLOps** | $150k - $260k | Model serving, inference optimization, cost mgmt | [Stage 4 resources](#stage-4-production--operations--生产部署) |
+| **AI Product Manager** | $140k - $250k | Agent UX, product strategy, evaluation metrics | Cross-cutting skills |
+
+### Job Boards | 招聘平台
+
+| Platform | Focus | Region |
+|---|---|---|
+| [ByteDance Agent Jobs](https://jobs.bytedance.com) | 18+ Agent roles across TRAE/CapCut/TikTok | China / Global |
+| [Tencent Agent Jobs](https://careers.tencent.com/search.html?keyword=agent) | 6 pages of Agent positions | China / US |
+| [AI Jobs](https://aijobs.net) | AI/ML roles | Global |
+| [MLOps Jobs](https://mlops.jobs) | MLOps & AI Eng | Global |
+| [Wellfound (AngelList)](https://wellfound.com) | Startup AI roles | Global |
+| [Y Combinator Work at a Startup](https://www.ycombinator.com/jobs) | YC company roles | US-focused |
+| [RemoteOK](https://remoteok.com/remote-ai-jobs) | Remote AI roles | Global |
+| [AI 研习社招聘](https://job.yanxishe.com) | AI 岗位 | 中国 |
+| [Boss 直聘](https://www.zhipin.com) | 全品类 | 中国 |
+| [牛客网](https://www.nowcoder.com/recommend) | 技术岗位 + 面试 | 中国 |
+
+### Interview Prep | 面试准备
+
+Common interview topics for AI Agent roles:
+
+AI Agent 岗位常见面试主题：
+
+**System Design | 系统设计**
+- Design an agent that can browse the web and answer research questions
+- Design a multi-agent code review system
+- Design a RAG pipeline with 10M documents
+- Design an agent monitoring and alerting system
+
+**Technical Deep-Dives | 技术深度**
+- How does the ReAct (Reason + Act) pattern work?
+- Compare agent memory strategies: buffer, summary, vector, knowledge graph
+- How do you evaluate agent quality without ground truth?
+- Explain the MCP protocol and when to use it vs direct function calling
+
+**Behavioral | 行为面试**
+- Describe a time you debugged an agent that was hallucinating
+- How do you handle a situation where the agent's cost is too high?
+- How would you roll out an agent feature with safety in mind?
+
+### Portfolio Projects | 作品集项目
+
+Build these projects to demonstrate your agent engineering skills:
+
+构建这些项目来展示你的 Agent 工程能力：
+
+| Project | Difficulty | Skills Demonstrated |
+|---|---|---|
+| CLI Agent with tool use | Beginner | Agent loop, function calling, structured output |
+| MCP Server for a SaaS API | Intermediate | MCP protocol, tool design, error handling |
+| RAG chatbot over your docs | Intermediate | Chunking, embedding, retrieval, generation |
+| Multi-agent research assistant | Advanced | Orchestration, delegation, synthesis |
+| Agent eval harness | Advanced | Testing frameworks, metrics, CI integration |
+| Production agent with monitoring | Advanced | Deployment, observability, guardrails, cost control |
+
+> **Hands-on practice | 动手实践**: [AgentWay Exercises & Capstones](https://agentway.dev/learn?utm_source=github&utm_medium=awesome-list&utm_campaign=career&utm_content=portfolio-projects) provide guided agent projects with automated grading.
 
 ---
 
@@ -170,7 +331,9 @@ Full-featured frameworks for building agent applications.
 - **Python + Type Safety?** → Pydantic AI — the FastAPI of agents (2.9M weekly, fastest-growing Python framework)
 - **Claude-native?** → Claude Agent SDK — direct access to Claude Code's capabilities
 
-> **Learn more | 深入学习**: [AgentWay — Agent Basics](https://agentway.dev/learn/docs/basics) covers the agent loop pattern used by all these frameworks.
+> **Build your first agent | 构建你的第一个 Agent**: The [AgentWay — Agent Basics](https://agentway.dev/learn/docs/basics?utm_source=github&utm_medium=awesome-list&utm_campaign=stage1&utm_content=agent-basics) path covers the agent loop pattern used by all these frameworks — from perceive → reason → act to tool integration. Free tier.
+>
+> [AgentWay — Agent 基础](https://agentway.dev/learn/docs/basics?utm_source=github&utm_medium=awesome-list&utm_campaign=stage1&utm_content=agent-basics) 路径涵盖所有框架共用的 Agent 循环模式 —— 从感知 → 推理 → 行动到工具集成。免费层可用。
 
 ### LLM SDKs & Providers | 大模型 SDK 与服务商
 
@@ -180,11 +343,11 @@ Core SDKs for connecting to LLM providers. **The npm download numbers reflect re
 
 | Project | npm Weekly | PyPI Weekly | Key Models | 趋势 |
 |---|---|---|---|---|
-| [Anthropic SDK](https://github.com/anthropics/anthropic-sdk-python) | 4.51M | — | Claude 4, Claude 3.5 | 4.2x YoY 🔥 |
-| [Claude Agent SDK](https://github.com/anthropics/claude-agent-sdk-typescript) | 1.58M | — | Claude Code capabilities | New in 2025 🚀 |
+| [Anthropic SDK](https://github.com/anthropics/anthropic-sdk-python) | 4.51M | — | Claude 4, Claude 3.5 | 4.2x YoY |
+| [Claude Agent SDK](https://github.com/anthropics/claude-agent-sdk-typescript) | 1.58M | — | Claude Code capabilities | New in 2025 |
 | [OpenAI SDK](https://github.com/openai/openai-python) | — | — | GPT-4o, o3, o4-mini | Industry standard |
-| [Google GenAI SDK](https://github.com/googleapis/python-genai) | 4.76M | 54M | Gemini 2.5 Pro/Flash | 1,658x YoY 🚀 |
-| [AI SDK (Vercel)](https://github.com/vercel/ai) | 4.54M | — | Multi-provider | 4.4x YoY 🔥 |
+| [Google GenAI SDK](https://github.com/googleapis/python-genai) | 4.76M | 54M | Gemini 2.5 Pro/Flash | 1,658x YoY |
+| [AI SDK (Vercel)](https://github.com/vercel/ai) | 4.54M | — | Multi-provider | 4.4x YoY |
 | [AWS Bedrock SDK](https://docs.aws.amazon.com/bedrock/) | — | — | Multi-provider | Enterprise |
 | [Ollama](https://github.com/ollama/ollama) | 570K | — | Llama 3, Mistral, Phi | Local AI |
 | [LiteLLM](https://github.com/BerriAI/litellm) | — | — | All providers | Unified proxy |
@@ -242,7 +405,9 @@ Model Context Protocol — the open standard for connecting AI to tools and data
 | [MCP TypeScript SDK](https://github.com/modelcontextprotocol/typescript-sdk) | 5k+ | Official TypeScript SDK for building MCP servers/clients. |
 | [MCP Python SDK](https://github.com/modelcontextprotocol/python-sdk) | 5k+ | Official Python SDK for building MCP servers/clients. |
 
-> **Learn more | 深入学习**: [AgentWay — MCP & Skills](https://agentway.dev/learn/docs/mcp) walks through building your own MCP server from scratch.
+> **Build your own MCP server | 构建你自己的 MCP Server**: [AgentWay — MCP & Skills](https://agentway.dev/learn/docs/mcp?utm_source=github&utm_medium=awesome-list&utm_campaign=stage2&utm_content=mcp) walks through building an MCP server from scratch — from protocol basics to tool registration. Free tier.
+>
+> [AgentWay — MCP & Skills](https://agentway.dev/learn/docs/mcp?utm_source=github&utm_medium=awesome-list&utm_campaign=stage2&utm_content=mcp) 从零构建 MCP Server —— 从协议基础到工具注册。免费层可用。
 
 ### Memory & Context Management | 记忆与上下文管理
 
@@ -258,7 +423,9 @@ Solutions for giving agents persistent memory and context.
 | [Memary](https://github.com/kingjulio8238/memary) | 2k+ | Memory architecture for autonomous agents. |
 | [Cognee](https://github.com/topoteretes/cognee) | 3k+ | Memory management via knowledge graphs for AI apps. |
 
-> **Learn more | 深入学习**: [AgentWay — Memory](https://agentway.dev/learn/docs/memory) covers context window strategies and session management patterns.
+> **Go deeper | 深入了解**: [AgentWay — Memory](https://agentway.dev/learn/docs/memory?utm_source=github&utm_medium=awesome-list&utm_campaign=stage2&utm_content=memory) covers context window strategies, session management patterns, and when to use each memory type.
+>
+> [AgentWay — Memory](https://agentway.dev/learn/docs/memory?utm_source=github&utm_medium=awesome-list&utm_campaign=stage2&utm_content=memory) 涵盖上下文窗口策略、会话管理模式以及各记忆类型的适用场景。
 
 ### Prompt Engineering | 提示词工程
 
@@ -275,7 +442,9 @@ Tools and libraries for systematic prompt management.
 | [Instructor](https://github.com/instructor-ai/instructor) | 10k+ | Structured outputs from LLMs using Pydantic models. |
 | [Outlines](https://github.com/dottxt-ai/outlines) | 10k+ | Structured text generation with regex/JSON schema constraints. |
 
-> **Learn more | 深入学习**: [AgentWay — Prompts](https://agentway.dev/learn/docs/prompts) teaches prompt design patterns specific to agent systems.
+> **Go deeper | 深入了解**: [AgentWay — Prompts](https://agentway.dev/learn/docs/prompts?utm_source=github&utm_medium=awesome-list&utm_campaign=stage2&utm_content=prompts) teaches prompt design patterns specific to agent systems — from system prompts to chain-of-thought for tools.
+>
+> [AgentWay — Prompts](https://agentway.dev/learn/docs/prompts?utm_source=github&utm_medium=awesome-list&utm_campaign=stage2&utm_content=prompts) 教授 Agent 系统专用的提示词设计模式 —— 从系统提示词到工具链式思考。
 
 ---
 
@@ -284,6 +453,21 @@ Tools and libraries for systematic prompt management.
 > Design sophisticated agent systems. Multi-agent orchestration, RAG pipelines, and evaluation.
 >
 > 设计复杂 Agent 系统。多 Agent 编排、RAG 管道和评估体系。
+
+### Agent Patterns Cheat Sheet | Agent 模式速查
+
+Quick reference for the most common agent architecture patterns:
+
+最常见 Agent 架构模式速查：
+
+| Pattern | When to Use | Example | Learn More |
+|---|---|---|---|
+| **ReAct** | General reasoning + action | Web research agent | [Agent Basics](https://agentway.dev/learn/docs/basics?utm_source=github&utm_medium=awesome-list&utm_campaign=stage3&utm_content=patterns-react) |
+| **Plan-Execute** | Complex multi-step tasks | Project management agent | [Multi-Agent](https://agentway.dev/learn/docs/multi-agent?utm_source=github&utm_medium=awesome-list&utm_campaign=stage3&utm_content=patterns-plan) |
+| **Reflection** | Self-improving outputs | Code review agent | [Evaluation](https://agentway.dev/learn/docs/evaluation?utm_source=github&utm_medium=awesome-list&utm_campaign=stage3&utm_content=patterns-reflection) |
+| **Tool Router** | Dynamic tool selection | Customer support agent | [MCP](https://agentway.dev/learn/docs/mcp?utm_source=github&utm_medium=awesome-list&utm_campaign=stage3&utm_content=patterns-router) |
+| **Supervisor** | Multi-agent coordination | Software dev team | [Multi-Agent](https://agentway.dev/learn/docs/multi-agent?utm_source=github&utm_medium=awesome-list&utm_campaign=stage3&utm_content=patterns-supervisor) |
+| **HITL** | High-stakes decisions | Financial trading agent | [Agent Security](https://agentway.dev/learn/docs/agent-security?utm_source=github&utm_medium=awesome-list&utm_campaign=stage3&utm_content=patterns-hitl) |
 
 ### Multi-Agent Systems | 多 Agent 系统
 
@@ -300,7 +484,9 @@ Frameworks and patterns for coordinating multiple agents.
 | [ChatDev](https://github.com/OpenBMB/ChatDev) | 30k+ | Communicative agents simulating a software development company. |
 | [OpenClaw](https://openclaw.ai) | — | Persistent agent orchestrator with multi-channel routing. |
 
-> **Learn more | 深入学习**: [AgentWay — Multi-Agent](https://agentway.dev/learn/docs/multi-agent) covers orchestration patterns, delegation, and consensus.
+> **Go deeper | 深入了解**: [AgentWay — Multi-Agent](https://agentway.dev/learn/docs/multi-agent?utm_source=github&utm_medium=awesome-list&utm_campaign=stage3&utm_content=multi-agent) covers orchestration patterns, delegation, and consensus — with hands-on exercises.
+>
+> [AgentWay — Multi-Agent](https://agentway.dev/learn/docs/multi-agent?utm_source=github&utm_medium=awesome-list&utm_campaign=stage3&utm_content=multi-agent) 涵盖编排模式、委托和共识 —— 配有动手练习。
 
 ### RAG & Knowledge | RAG 与知识库
 
@@ -318,7 +504,9 @@ Agent 的检索增强生成和知识管理。
 | [Chonkie](https://github.com/chonkie-inc/chonkie) | 5k+ | Lightweight, blazing-fast text chunking library for RAG. |
 | [Unstructured](https://github.com/Unstructured-IO/unstructured) | 10k+ | ETL for unstructured documents (PDF, images, HTML → LLM-ready). |
 
-> **Learn more | 深入学习**: [AgentWay — Agentic RAG](https://agentway.dev/learn/docs/agentic-rag) teaches how to build agents that reason over retrieved knowledge.
+> **Go deeper | 深入了解**: [AgentWay — Agentic RAG](https://agentway.dev/learn/docs/agentic-rag?utm_source=github&utm_medium=awesome-list&utm_campaign=stage3&utm_content=agentic-rag) teaches how to build agents that reason over retrieved knowledge — beyond simple vector search.
+>
+> [AgentWay — Agentic RAG](https://agentway.dev/learn/docs/agentic-rag?utm_source=github&utm_medium=awesome-list&utm_campaign=stage3&utm_content=agentic-rag) 教你构建能推理检索知识的 Agent —— 超越简单向量搜索。
 
 ### Evaluation & Testing | 评估与测试
 
@@ -336,7 +524,9 @@ Evaluate agent performance, quality, and safety systematically.
 | [AgentBench](https://github.com/THUDM/AgentBench) | 3k+ | Multi-dimensional benchmark for evaluating LLM-as-Agent. |
 | [SWE-bench](https://github.com/princeton-nlp/SWE-bench) | 3k+ | Benchmark for evaluating code-generation agents on real GitHub issues. |
 
-> **Learn more | 深入学习**: [AgentWay — Evaluation](https://agentway.dev/learn/docs/evaluation) covers building evaluation harnesses and systematic testing.
+> **Go deeper | 深入了解**: [AgentWay — Evaluation](https://agentway.dev/learn/docs/evaluation?utm_source=github&utm_medium=awesome-list&utm_campaign=stage3&utm_content=evaluation) covers building evaluation harnesses and systematic testing for agents.
+>
+> [AgentWay — Evaluation](https://agentway.dev/learn/docs/evaluation?utm_source=github&utm_medium=awesome-list&utm_campaign=stage3&utm_content=evaluation) 涵盖构建 Agent 评估工具和系统化测试。
 
 ### Coding Agents | 编程 Agent
 
@@ -356,7 +546,11 @@ AI agents that write, review, and debug code.
 | [Windsurf](https://codeium.com/windsurf) | — | AI-native IDE by Codeium with Cascade agentic flow. | Free / $15/mo |
 | [Copilot](https://github.com/features/copilot) | — | GitHub's AI pair programmer. Agent mode in VS Code. | Free / $10/mo |
 
-> **Learn more | 深入学习**: [AgentWay — Claude Code Guide](https://agentway.dev/claudecode) covers best practices for working with agentic coding tools.
+> **Going deeper with Claude Code** | Claude Code 深入指南
+>
+> Claude Code is the fastest-growing coding agent tool (24.5x YoY). The [Claude Code Mastery Guide](https://agentway.dev/claudecode?utm_source=github&utm_medium=awesome-list&utm_campaign=stage3&utm_content=claudecode) covers 14 chapters: CLAUDE.md → Hooks → Skills → MCP → Plan Mode → Workflows → Debugging → and more.
+>
+> Claude Code 是增长最快的编程 Agent 工具（年增长24.5倍）。[Claude Code 精通指南](https://agentway.dev/claudecode?utm_source=github&utm_medium=awesome-list&utm_campaign=stage3&utm_content=claudecode) 包含14章深入教程。
 
 ---
 
@@ -410,7 +604,9 @@ Protect your agents from misuse, hallucination, and security threats.
 | [LLM Guard](https://github.com/protectai/llm-guard) | 2k+ | Security toolkit for LLM interactions. |
 | [Invariant Analyzer](https://github.com/invariantlabs-ai/invariant) | 1k+ | Static analysis and runtime monitoring for AI agents. |
 
-> **Learn more | 深入学习**: [AgentWay — Agent Security](https://agentway.dev/learn/docs/agent-security) covers red teaming, guardrails, and security patterns for agents.
+> **Go deeper | 深入了解**: [AgentWay — Agent Security](https://agentway.dev/learn/docs/agent-security?utm_source=github&utm_medium=awesome-list&utm_campaign=stage4&utm_content=agent-security) covers red teaming, guardrails, and security patterns for production agents.
+>
+> [AgentWay — Agent Security](https://agentway.dev/learn/docs/agent-security?utm_source=github&utm_medium=awesome-list&utm_campaign=stage4&utm_content=agent-security) 涵盖红队测试、护栏和生产 Agent 安全模式。
 
 ### LLM Serving & Inference | 模型服务与推理
 
@@ -439,7 +635,7 @@ Self-host and optimize LLM inference for agent workloads.
 
 | Course | Language | Cost | Highlights |
 |---|---|---|---|
-| [AgentWay](https://agentway.dev/learn) | EN / 中文 | Freemium | Gamified learning with XP, exercises, capstone projects. 16 paths from basics to production. |
+| [AgentWay](https://agentway.dev/learn?utm_source=github&utm_medium=awesome-list&utm_campaign=learning&utm_content=courses) | EN / 中文 | **Free**: Track 0-1 (Agent Basics, Tools, Prompts) / **$79+**: Full access (18 paths, lifetime) | Gamified: XP, exercises, capstones. 18 paths from basics to production. |
 | [DeepLearning.AI — AI Agents](https://www.deeplearning.ai/courses/) | EN | Free | Short courses by Andrew Ng on agent design patterns. |
 | [LangChain Academy](https://academy.langchain.com) | EN | Free | Official LangChain/LangGraph courses and certifications. |
 | [Hugging Face Agents Course](https://huggingface.co/learn/agents-course) | EN | Free | Community-driven agent development course. |
@@ -451,8 +647,8 @@ Self-host and optimize LLM inference for agent workloads.
 
 | Resource | Topic | Description |
 |---|---|---|
-| [AgentWay — Claude Code Guide](https://agentway.dev/claudecode) | Coding Agents | Best practices for Claude Code: CLAUDE.md, hooks, skills, MCP. |
-| [AgentWay — OpenClaw Guide](https://agentway.dev/openclaw) | Agent Orchestration | Getting started with OpenClaw multi-agent orchestration. |
+| [AgentWay — Claude Code Guide](https://agentway.dev/claudecode?utm_source=github&utm_medium=awesome-list&utm_campaign=learning&utm_content=claudecode-guide) | Coding Agents | Best practices for Claude Code: CLAUDE.md, hooks, skills, MCP. |
+| [AgentWay — OpenClaw Guide](https://agentway.dev/openclaw?utm_source=github&utm_medium=awesome-list&utm_campaign=learning&utm_content=openclaw-guide) | Agent Orchestration | Getting started with OpenClaw multi-agent orchestration. |
 | [Anthropic Agent Documentation](https://docs.anthropic.com/en/docs/agents-and-tools) | Agent Fundamentals | Official guide to building agents with Claude. |
 | [OpenAI Agent Guide](https://platform.openai.com/docs/guides/agents) | Agent Fundamentals | Official guide to building agents with GPT models. |
 | [Google Agent Development](https://ai.google.dev/gemini-api/docs/agents) | Agent Fundamentals | Building agents with Gemini and Google ADK. |
@@ -489,139 +685,6 @@ Self-host and optimize LLM inference for agent workloads.
 
 ---
 
-## Career & Jobs | 职业发展
-
-> Turn your agent skills into a career. Explore roles, prep for interviews, and build your portfolio.
->
-> 将 Agent 技能转化为职业优势。探索岗位、准备面试、构建作品集。
-
-### Top Companies Are Hiring — Agent Is Real | 头部团队正在大规模招聘 —— Agent 不是概念
-
-More and more top tech companies are putting Agent into real engineering requirements. Here's what the hiring landscape looks like in March 2026:
-
-越来越多头部团队已经把 Agent 放进真实工程需求里。以下是 2026 年 3 月的招聘实况：
-
-#### ByteDance | 字节跳动 — 18 Agent Positions
-
-ByteDance has **18 core Agent positions** across 5+ product lines, spanning tech R&D, product design, algorithms, and business strategy. Key product lines hiring:
-
-字节跳动开放了 **18 个 Agent 核心岗位**，覆盖技术研发、产品设计、算法优化、商业分析等多个维度：
-
-| Product Line | Example Roles | Focus |
-|---|---|---|
-| **TRAE** (端到端 AI 编程) | Agent 框架优化专家, AI Coding 产品经理, 战略商业分析师 | AI coding agent, 月活超100万 |
-| **火山引擎** | HiAgent 交付专家 | 企业级 Agent 平台 |
-| **剪映 CapCut** | 高级 AI Agent 开发工程师, 移动端研发工程师(即梦AI) | 视频创作 + AIGC |
-| **生活服务** | AI 应用开发工程师 | 游玩助手 Agent（Prompt/RAG/MCP） |
-| **TikTok Shop** | 资深前端研发工程师(AI方向) | 国际电商 + AIGC |
-| **Seed 研究院** | 大语言模型 AI 搜索 Agent 算法工程师 | 前沿 AI 研究 |
-| **开发者服务** | Dev Agent 后端开发, AI Agent 研发实习生 | 研发工具全链路 |
-
-> Data source: [jobs.bytedance.com](https://jobs.bytedance.com) — [Full report | 完整报告](https://youmind.com/s/ao2k8w2erLeFpZ)
-
-#### Tencent | 腾讯 — 6 Pages of Agent Positions
-
-Tencent's careers page returns **6 full pages** of Agent-related positions, spanning domestic (Beijing, Shanghai, Guangzhou, Shenzhen, Chengdu) and overseas (Palo Alto, Bellevue). Key directions:
-
-腾讯招聘官网搜索 "Agent" 返回**满满当当6页岗位**，覆盖国内北上广深成都及海外硅谷：
-
-| Direction | Example Roles | Salary Range |
-|---|---|---|
-| **Coding Agent** (北美) | Sr. AI Software Engineer – Coding Agent | $116K - $269K/yr |
-| **企业微信 Agent** | 深度学习算法工程师 - Agent 应用 | 30K-60K/月 |
-| **AI 搜索 Agent** | 大模型算法研究员（Agent 方向） | 30K-80K/月 |
-| **多模态 Agent** | 多模态大模型算法研究员 | 50K-80K/月 |
-
-> Data source: [careers.tencent.com](https://careers.tencent.com) — [Full report | 完整报告](https://youmind.com/s/6T00tMDDGETWef)
-
-#### What This Tells Us | 这说明什么
-
-The hiring data from ByteDance and Tencent reveals **which skills matter most** in real Agent engineering jobs:
-
-字节和腾讯的招聘数据揭示了 Agent 工程岗位**真正需要的技能**：
-
-1. **Agent framework design** (框架设计) — Tooling, Memory, Planning, Workflow orchestration
-2. **LLM engineering** (大模型工程化) — Prompt engineering, RAG, fine-tuning, multi-model support
-3. **Production engineering** (生产工程) — High availability, observability, cost control, MCP protocol
-4. **Cross-domain skills** (跨领域能力) — Business understanding + technical depth
-
-> **These skills map directly to our 4-stage learning path** — and to the [AgentWay curriculum](https://agentway.dev/zh) that covers 90% of the skills required by top-tier Agent positions.
->
-> **这些技能直接对应我们的4阶段学习路径** —— 以及涵盖头部团队 Agent 应用开放岗位90%技能需求的 [AgentWay 大纲](https://agentway.dev/zh)。
-
-### In-Demand Roles | 热门岗位
-
-The agent economy is creating new roles. Here are the most in-demand positions in 2026:
-
-Agent 经济正在创造新的岗位。以下是 2026 年最热门的职位：
-
-| Role | Salary Range (USD) | Core Skills | Learning Path |
-|---|---|---|---|
-| **AI Agent Engineer** | $150k - $250k | Agent frameworks, MCP, tool integration, prompt eng | [AgentWay Track 1-3](https://agentway.dev/learn) |
-| **Agent Platform Engineer** | $160k - $280k | Infrastructure, deployment, scaling, monitoring | [Stage 4 resources](#stage-4-production--operations--生产部署) |
-| **AI Security Engineer** | $180k - $300k | Red teaming, guardrails, prompt injection defense | [AgentWay — Agent Security](https://agentway.dev/learn/docs/agent-security) |
-| **RAG Engineer** | $140k - $240k | Vector DBs, chunking, retrieval, knowledge graphs | [AgentWay — Agentic RAG](https://agentway.dev/learn/docs/agentic-rag) |
-| **Multi-Agent Architect** | $180k - $320k | Orchestration, delegation, consensus, workflows | [AgentWay — Multi-Agent](https://agentway.dev/learn/docs/multi-agent) |
-| **LLM Ops / MLOps** | $150k - $260k | Model serving, inference optimization, cost mgmt | [Stage 4 resources](#stage-4-production--operations--生产部署) |
-| **AI Product Manager** | $140k - $250k | Agent UX, product strategy, evaluation metrics | Cross-cutting skills |
-
-### Job Boards | 招聘平台
-
-| Platform | Focus | Region |
-|---|---|---|
-| [ByteDance Agent Jobs](https://jobs.bytedance.com) | 18+ Agent roles across TRAE/CapCut/TikTok | China / Global |
-| [Tencent Agent Jobs](https://careers.tencent.com/search.html?keyword=agent) | 6 pages of Agent positions | China / US |
-| [AI Jobs](https://aijobs.net) | AI/ML roles | Global |
-| [MLOps Jobs](https://mlops.jobs) | MLOps & AI Eng | Global |
-| [Wellfound (AngelList)](https://wellfound.com) | Startup AI roles | Global |
-| [Y Combinator Work at a Startup](https://www.ycombinator.com/jobs) | YC company roles | US-focused |
-| [RemoteOK](https://remoteok.com/remote-ai-jobs) | Remote AI roles | Global |
-| [AI 研习社招聘](https://job.yanxishe.com) | AI 岗位 | 中国 |
-| [Boss 直聘](https://www.zhipin.com) | 全品类 | 中国 |
-| [牛客网](https://www.nowcoder.com/recommend) | 技术岗位 + 面试 | 中国 |
-
-### Interview Prep | 面试准备
-
-Common interview topics for AI Agent roles:
-
-AI Agent 岗位常见面试主题：
-
-**System Design | 系统设计**
-- Design an agent that can browse the web and answer research questions
-- Design a multi-agent code review system
-- Design a RAG pipeline with 10M documents
-- Design an agent monitoring and alerting system
-
-**Technical Deep-Dives | 技术深度**
-- How does the ReAct (Reason + Act) pattern work?
-- Compare agent memory strategies: buffer, summary, vector, knowledge graph
-- How do you evaluate agent quality without ground truth?
-- Explain the MCP protocol and when to use it vs direct function calling
-
-**Behavioral | 行为面试**
-- Describe a time you debugged an agent that was hallucinating
-- How do you handle a situation where the agent's cost is too high?
-- How would you roll out an agent feature with safety in mind?
-
-### Portfolio Projects | 作品集项目
-
-Build these projects to demonstrate your agent engineering skills:
-
-构建这些项目来展示你的 Agent 工程能力：
-
-| Project | Difficulty | Skills Demonstrated |
-|---|---|---|
-| CLI Agent with tool use | Beginner | Agent loop, function calling, structured output |
-| MCP Server for a SaaS API | Intermediate | MCP protocol, tool design, error handling |
-| RAG chatbot over your docs | Intermediate | Chunking, embedding, retrieval, generation |
-| Multi-agent research assistant | Advanced | Orchestration, delegation, synthesis |
-| Agent eval harness | Advanced | Testing frameworks, metrics, CI integration |
-| Production agent with monitoring | Advanced | Deployment, observability, guardrails, cost control |
-
-> **Hands-on practice | 动手实践**: [AgentWay Exercises & Capstones](https://agentway.dev/learn) provide guided agent projects with automated grading.
-
----
-
 ## Community | 社区
 
 > Connect with other agent builders. Share, learn, and collaborate.
@@ -636,7 +699,7 @@ Build these projects to demonstrate your agent engineering skills:
 | [Anthropic Discord](https://discord.gg/anthropic) | Discord | Claude, agent development | 30k+ |
 | [OpenAI Discord](https://discord.gg/openai) | Discord | GPT, assistants, agents | 100k+ |
 | [Hugging Face Discord](https://discord.gg/huggingface) | Discord | Open-source AI/ML | 50k+ |
-| [AgentWay Discord](https://discord.gg/agentway) | Discord | Agent learning community | Growing |
+| [AgentWay Discord](https://discord.gg/agentway) | Discord | Agent learning community, weekly challenges | Growing |
 | [MLOps Community](https://mlops.community) | Slack | MLOps, AI engineering | 20k+ |
 | [AI Engineer Foundation](https://discord.gg/ai-engineer) | Discord | AI engineering practice | 10k+ |
 
