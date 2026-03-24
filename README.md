@@ -129,9 +129,9 @@ Agent 开发框架层出不穷 —— Claude Agent SDK、Vercel AI SDK、Google 
 
    **Pydantic AI 是 Python 黑马** —— PyPI 周下载290万，Pydantic 团队出品。"Agent 界的 FastAPI" 定位深得 Python 开发者认同。
 
-> **Our recommendation | 我们的建议**: Don't chase frameworks — **choose based on your stack and use case**. See the comparison table below. For a deeper analysis, check [AgentWay — Framework Guide](https://agentway.dev/learn/docs/frameworks).
+> **Our recommendation | 我们的建议**: Don't chase frameworks — **choose based on your stack and use case**. See the comparison table below. For a deeper analysis, check [AgentWay — Agent Basics](https://agentway.dev/learn/docs/basics).
 >
-> **不要追逐框架 —— 根据你的技术栈和场景选择。** 详见下方对比表。深入分析请看 [AgentWay — 框架指南](https://agentway.dev/learn/docs/frameworks)。
+> **不要追逐框架 —— 根据你的技术栈和场景选择。** 详见下方对比表。深入分析请看 [AgentWay — Agent 基础](https://agentway.dev/learn/docs/basics)。
 
 ---
 
@@ -197,7 +197,7 @@ Get started quickly with production-ready templates.
 
 | Project | Stack | Description |
 |---|---|---|
-| [LangChain Templates](https://github.com/langchain-ai/langchain/tree/master/templates) | Python | Official templates for common agent patterns. |
+| [LangChain Templates](https://templates.langchain.com) | Python | Official templates for common agent patterns. |
 | [CrewAI Examples](https://github.com/crewAIInc/crewAI-examples) | Python | Multi-agent collaboration examples. |
 | [Vercel AI Chatbot](https://github.com/vercel/ai-chatbot) | Next.js | Full-stack chatbot template with streaming. |
 | [OpenAI Cookbook](https://github.com/openai/openai-cookbook) | Python/JS | Comprehensive examples for GPT APIs. |
@@ -226,7 +226,7 @@ Libraries and patterns for giving agents real-world capabilities.
 | [Crawl4AI](https://github.com/unclecode/crawl4ai) | 40k+ | AI-friendly web crawler and scraper for agent pipelines. |
 | [Firecrawl](https://github.com/mendableai/firecrawl) | 30k+ | Turn websites into LLM-ready markdown/structured data. |
 | [E2B](https://github.com/e2b-dev/e2b) | 5k+ | Secure cloud sandboxes for AI-generated code execution. |
-| [Toolhouse](https://github.com/toolhouseai/toolhouse) | 1k+ | Cloud-based tool infrastructure for agents. |
+| [Toolhouse](https://toolhouse.ai) | 1k+ | Cloud-based tool infrastructure for agents. |
 
 ### MCP Servers & Ecosystem | MCP 服务与生态
 
@@ -315,7 +315,7 @@ Agent 的检索增强生成和知识管理。
 | [RAGFlow](https://github.com/infiniflow/ragflow) | 35k+ | Deep document understanding RAG engine with visual chunking. |
 | [Kotaemon](https://github.com/Cinnamon/kotaemon) | 20k+ | Open-source RAG-based document QA tool with clean UI. |
 | [GraphRAG](https://github.com/microsoft/graphrag) | 25k+ | Graph-based RAG using knowledge graph extraction from Microsoft. |
-| [Chonkie](https://github.com/bhavnicksm/chonkie) | 5k+ | Lightweight, blazing-fast text chunking library for RAG. |
+| [Chonkie](https://github.com/chonkie-inc/chonkie) | 5k+ | Lightweight, blazing-fast text chunking library for RAG. |
 | [Unstructured](https://github.com/Unstructured-IO/unstructured) | 10k+ | ETL for unstructured documents (PDF, images, HTML → LLM-ready). |
 
 > **Learn more | 深入学习**: [AgentWay — Agentic RAG](https://agentway.dev/learn/docs/agentic-rag) teaches how to build agents that reason over retrieved knowledge.
@@ -455,8 +455,8 @@ Self-host and optimize LLM inference for agent workloads.
 | [AgentWay — OpenClaw Guide](https://agentway.dev/openclaw) | Agent Orchestration | Getting started with OpenClaw multi-agent orchestration. |
 | [Anthropic Agent Documentation](https://docs.anthropic.com/en/docs/agents-and-tools) | Agent Fundamentals | Official guide to building agents with Claude. |
 | [OpenAI Agent Guide](https://platform.openai.com/docs/guides/agents) | Agent Fundamentals | Official guide to building agents with GPT models. |
-| [Google Agent Development](https://ai.google.dev/gemini-api/docs/agentic) | Agent Fundamentals | Building agents with Gemini and Google ADK. |
-| [LangGraph Tutorials](https://langchain-ai.github.io/langgraph/tutorials/) | Frameworks | Step-by-step LangGraph agent tutorials. |
+| [Google Agent Development](https://ai.google.dev/gemini-api/docs/agents) | Agent Fundamentals | Building agents with Gemini and Google ADK. |
+| [LangGraph Tutorials](https://langchain-ai.github.io/langgraph/) | Frameworks | Step-by-step LangGraph agent tutorials. |
 
 ### Books | 书籍
 
@@ -473,9 +473,9 @@ Self-host and optimize LLM inference for agent workloads.
 | Resource | Format | Description |
 |---|---|---|
 | [Latent Space](https://www.latent.space/podcast) | Podcast | AI engineering interviews and deep dives. |
-| [The AI Engineering Podcast](https://www.aiengineering.fm/) | Podcast | Focused on building production AI systems. |
+| [The AI Engineering Podcast](https://www.aiengineeringpodcast.com/) | Podcast | Focused on building production AI systems. |
 | [AI Jason](https://www.youtube.com/@AIJasonZ) | YouTube | Agent tutorials and framework comparisons. |
-| [Matt Shumer](https://www.youtube.com/@MattShumer) | YouTube | Agent design and multi-agent patterns. |
+| [Matt Shumer](https://shumer.dev) | Blog | Agent design, multi-agent patterns, and AI industry insights. |
 | [Dave Ebbelaar](https://www.youtube.com/@daveebbelaar) | YouTube | LangChain/LangGraph practical tutorials. |
 
 ### Newsletters | 订阅通讯
@@ -646,7 +646,7 @@ Build these projects to demonstrate your agent engineering skills:
 |---|---|---|---|
 | [AI Engineer Summit](https://www.ai.engineer/) | Annual | SF / Virtual | AI engineering practice |
 | [NeurIPS](https://neurips.cc) | Dec | Annual | ML research including agents |
-| [LangChain Days](https://www.langchain.com/events) | Quarterly | Virtual | LangChain ecosystem |
+| [LangChain Days](https://www.langchain.com/resources) | Quarterly | Virtual | LangChain ecosystem |
 | [AgentCon](https://agentcon.ai) | Annual | SF | Agent-focused conference |
 
 ### Chinese Community | 中文社区
